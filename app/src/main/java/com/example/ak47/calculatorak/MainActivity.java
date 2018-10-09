@@ -1,0 +1,142 @@
+package com.example.ak47.calculatorak;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    public void addition (View view){
+        EditText e1 = (EditText) findViewById(R.id.input1);
+        EditText e2 = (EditText) findViewById(R.id.input2);
+        EditText e3 = (EditText) findViewById(R.id.output);
+        double num1= Double.parseDouble(e1.getText().toString());
+        double num2= Double.parseDouble(e2.getText().toString());
+        Double sum = num1 + num2 ;
+        e3.setText(Double.toString(sum));
+
+    }
+
+    public void subtraction (View view){
+        EditText e1 = (EditText) findViewById(R.id.input1);
+        EditText e2 = (EditText) findViewById(R.id.input2);
+        EditText e3 = (EditText) findViewById(R.id.output);
+        double num1= Double.parseDouble(e1.getText().toString());
+        double num2= Double.parseDouble(e2.getText().toString());
+        Double sum = num1 - num2 ;
+        e3.setText(Double.toString(sum));
+    }
+    public void multiply (View view){
+        EditText e1 = (EditText) findViewById(R.id.input1);
+        EditText e2 = (EditText) findViewById(R.id.input2);
+        EditText e3 = (EditText) findViewById(R.id.output);
+        double num1= Double.parseDouble(e1.getText().toString());
+        double num2= Double.parseDouble(e2.getText().toString());
+        Double sum = num1 * num2 ;
+        e3.setText(Double.toString(sum));
+    }
+    public void division (View view){
+        EditText e1 = (EditText) findViewById(R.id.input1);
+        EditText e2 = (EditText) findViewById(R.id.input2);
+        EditText e3 = (EditText) findViewById(R.id.output);
+        double num1= Double.parseDouble(e1.getText().toString());
+        double num2= Double.parseDouble(e2.getText().toString());
+        Double sum = num1 / num2 ;
+        e3.setText(Double.toString(sum));
+    }
+     public void reuse (View view){
+         EditText e1 = (EditText) findViewById(R.id.input1);
+         EditText e2 = (EditText) findViewById(R.id.input2);
+         EditText e3 = (EditText) findViewById(R.id.output);
+         double num1= Double.parseDouble(e1.getText().toString());
+         double num2= Double.parseDouble(e2.getText().toString());
+         double num3= Double.parseDouble(e3.getText().toString());
+
+         e1.setText(Double.toString(num3));
+     }
+      public void cos (View view){
+          EditText e1 = (EditText) findViewById(R.id.input1);
+          EditText e2 = (EditText) findViewById(R.id.input2);
+          EditText e3 = (EditText) findViewById(R.id.output);
+          double num1= Double.parseDouble(e1.getText().toString());
+          double num2= Double.parseDouble(e2.getText().toString());
+          Double sum = Math.sqrt(num1);
+          e3.setText(Double.toString(sum));
+      }
+       public void pow (View view){
+           EditText e1 = (EditText) findViewById(R.id.input1);
+           EditText e2 = (EditText) findViewById(R.id.input2);
+           EditText e3 = (EditText) findViewById(R.id.output);
+           double num1= Double.parseDouble(e1.getText().toString());
+           double num2= Double.parseDouble(e2.getText().toString());
+           Double sum = Math.pow(num1,num2);
+           e3.setText(Double.toString(sum));
+       }
+        public void log (View view){
+            EditText e1 = (EditText) findViewById(R.id.input1);
+            EditText e2 = (EditText) findViewById(R.id.input2);
+            EditText e3 = (EditText) findViewById(R.id.output);
+            double num1= Double.parseDouble(e1.getText().toString());
+            double num2= Double.parseDouble(e2.getText().toString());
+            Double sum = Math.log(num1);
+            e3.setText(Double.toString(sum));
+        }
+    public void ak47 (View view){
+        EditText e1 = (EditText) findViewById(R.id.input1);
+        EditText e2 = (EditText) findViewById(R.id.input2);
+        EditText e3 = (EditText) findViewById(R.id.output);
+
+        e3.setText("");
+        e2.setText("");
+        e1.setText("");
+        Toast amit = (Toast.makeText(getApplicationContext(),"RESET COMPLETED",Toast.LENGTH_LONG));
+        amit.show();
+
+    }
+    public void quadratic (View view) {
+        EditText e1 = (EditText) findViewById(R.id.input1);
+        EditText e2 = (EditText) findViewById(R.id.input2);
+        EditText e3 = (EditText) findViewById(R.id.output);
+        double num1 = Double.parseDouble(e1.getText().toString());
+        String num2 = e2.getText().toString();
+        double a = (num2.charAt(0));
+        double b = (num2.charAt(4));
+        double c = (num2.charAt(7));
+        double d = (num2.charAt(3));
+        double e = (num2.charAt(6));
+        a=a-48;
+        b=b-48;
+        c=c-48;
+        double sum=0;
+
+      if (e1.getText().toString()=="" )
+      {
+          Toast amit = (Toast.makeText(getApplicationContext(),"INPUT1 IS EMPTY",Toast.LENGTH_LONG));
+                  amit.show();}
+        else if (num2=="" )
+        {
+            Toast amit = (Toast.makeText(getApplicationContext(),"INPUT2 IS EMPTY",Toast.LENGTH_LONG));
+            amit.show();}
+            else{
+
+           if (d==45 && e==45)
+               sum = a * num1 * num1 - b * num1 - c;
+            else if (d==45 && e ==43)
+                 sum = a * num1 * num1 - b * num1 + c;
+            else if (d==43 && e==45)
+                sum = a * num1 * num1 + b * num1 - c;
+            else if (d==43 && e==43)
+                sum = a * num1 * num1 + b * num1 + c;
+
+
+        e3.setText(Double.toString(sum));}
+    }
+   
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+}

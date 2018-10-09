@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/input1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingLeft="32dp"
+            android:ems="10"
+            android:background="@android:color/darker_gray"
+            android:inputType="textPersonName"
+            android:hint="INPUT1"
+            android:textSize="35sp"
+            android:layout_margin="8dp"/>
+
+        <EditText
+            android:id="@+id/input2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:paddingLeft="32dp"
+            android:ems="10"
+            android:hint="INPUT2"
+            android:inputType="textPersonName"
+            android:textSize="35sp"
+            android:layout_margin="8dp"/>
+
+        <EditText
+            android:id="@+id/output"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:background="@android:color/darker_gray"
+            android:paddingLeft="32dp"
+            android:hint="OUTPUT"
+            android:inputType="textPersonName"
+            android:textSize="35sp"
+            android:layout_margin="8dp"/>
+    </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+
+
+       <Button
+           android:id="@+id/add"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:layout_marginTop="8dp"
+           android:text="+"
+           android:layout_marginLeft="8dp"
+           android:textSize="30sp"
+           android:onClick="addition"/>
+       <Button
+           android:id="@+id/sub"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:layout_marginTop="10dp"
+           android:text="-"
+           android:layout_marginLeft="8dp"
+           android:textSize="30sp"
+           android:onClick="subtraction"/>
+       <Button
+           android:id="@+id/mul"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:text="*"
+           android:layout_marginLeft="8dp"
+           android:textSize="30sp"
+           android:onClick="multiply"
+           android:layout_marginRight="8dp"
+           android:layout_marginTop="10dp"/>
+   </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/pow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:text="POW"
+            android:layout_marginLeft="8dp"
+            android:textSize="30sp"
+            android:onClick="pow"/>
+        <Button
+            android:id="@+id/log"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:text="LOG"
+            android:layout_marginLeft="8dp"
+            android:textSize="30sp"
+            android:onClick="log"/>
+        <Button
+            android:id="@+id/div"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:text="/"
+            android:layout_marginLeft="8dp"
+            android:textSize="30sp"
+            android:layout_marginRight="8dp"
+            android:onClick="division"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/reuse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:text="REUSE"
+            android:layout_marginLeft="8dp"
+            android:textSize="30sp"
+            android:onClick="reuse"/>
+        <Button
+            android:id="@+id/cos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:text="SQRT"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:textSize="30sp"
+            android:onClick="cos"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+        <Button
+            android:id="@+id/quadratic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:text="QUADRATIC"
+
+            android:layout_marginLeft="10dp"
+            android:textSize="30sp"
+            android:onClick="quadratic"/>
+
+
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/ak47"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:text="AK47"
+       android:layout_margin="8dp"
+        android:textSize="40sp"
+        android:onClick="ak47"
+        />
+
+
+
+
+</LinearLayout>
