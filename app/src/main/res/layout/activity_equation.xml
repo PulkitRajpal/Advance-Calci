@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".equation">
+
+
+    <EditText
+        android:id="@+id/input1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingLeft="32dp"
+        android:ems="10"
+        android:background="@android:color/darker_gray"
+        android:inputType="textPersonName"
+        android:text="0"
+        android:textSize="35sp"
+        android:layout_margin="8dp"/>
+
+    <EditText
+        android:id="@+id/input2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:paddingLeft="32dp"
+        android:ems="10"
+        android:text="0"
+        android:inputType="textPersonName"
+        android:textSize="35sp"
+        android:layout_margin="8dp"/>
+
+    <EditText
+        android:id="@+id/output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:background="@android:color/darker_gray"
+        android:paddingLeft="32dp"
+        android:text="0"
+        android:inputType="textPersonName"
+        android:textSize="35sp"
+        android:layout_margin="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/sin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:text="SIN"
+            android:layout_marginLeft="8dp"
+            android:textSize="30sp"
+            android:onClick="sin"/>
+        <Button
+            android:id="@+id/cos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:text="COS"
+            android:layout_marginLeft="8dp"
+            android:textSize="30sp"
+            android:onClick="cos"/>
+        <Button
+            android:id="@+id/tan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TAN"
+            android:layout_marginLeft="8dp"
+            android:textSize="30sp"
+            android:onClick="tan"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/asin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:text="ASIN"
+            android:layout_marginLeft="8dp"
+            android:textSize="30sp"
+            android:onClick="asin"/>
+        <Button
+            android:id="@+id/acos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:text="ACOS"
+            android:layout_marginLeft="8dp"
+            android:textSize="30sp"
+            android:onClick="acos"/>
+        <Button
+            android:id="@+id/atan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:text="ATAN"
+            android:layout_marginLeft="8dp"
+            android:textSize="30sp"
+            android:layout_marginRight="8dp"
+            android:onClick="atan"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+        <Button
+            android:id="@+id/quadratic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:text="VALUE"
+
+            android:layout_marginLeft="10dp"
+            android:textSize="30sp"
+            android:onClick="cubic"/>
+        <Button
+            android:id="@+id/root"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:text="ROOT"
+
+            android:layout_marginLeft="10dp"
+            android:textSize="30sp"
+            android:onClick="root"/>
+
+
+        />
+    </LinearLayout>
+    <Button
+        android:id="@+id/ak47"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:text="AK47"
+        android:layout_margin="8dp"
+        android:textSize="40sp"
+        android:onClick="ak47"
+        />
+
+
+
+</LinearLayout>

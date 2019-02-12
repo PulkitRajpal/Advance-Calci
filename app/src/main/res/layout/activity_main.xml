@@ -22,7 +22,7 @@
             android:ems="10"
             android:background="@android:color/darker_gray"
             android:inputType="textPersonName"
-            android:hint="INPUT1"
+            android:text="0"
             android:textSize="35sp"
             android:layout_margin="8dp"/>
 
@@ -33,7 +33,7 @@
             android:background="@android:color/darker_gray"
             android:paddingLeft="32dp"
             android:ems="10"
-            android:hint="INPUT2"
+            android:text="0"
             android:inputType="textPersonName"
             android:textSize="35sp"
             android:layout_margin="8dp"/>
@@ -44,6 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+
             android:background="@android:color/darker_gray"
             android:paddingLeft="32dp"
             android:hint="OUTPUT"
@@ -173,7 +174,7 @@
             android:layout_weight="1"
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
-            android:text="QUADRATIC"
+            android:text="ADVANCE"
 
             android:layout_marginLeft="10dp"
             android:textSize="30sp"

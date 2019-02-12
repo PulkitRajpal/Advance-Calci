@@ -1,5 +1,6 @@
 package com.example.ak47.calculatorak;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,8 +15,19 @@ public class MainActivity extends AppCompatActivity {
         EditText e3 = (EditText) findViewById(R.id.output);
         double num1= Double.parseDouble(e1.getText().toString());
         double num2= Double.parseDouble(e2.getText().toString());
-        Double sum = num1 + num2 ;
-        e3.setText(Double.toString(sum));
+        if (e1.getText().toString()=="" )
+        { Toast amit = (Toast.makeText(getApplicationContext(),"INPUT1 IS EMPTY",Toast.LENGTH_LONG));
+            amit.show();
+        }
+
+        if (e2.getText().toString()=="" )
+        { Toast amit = (Toast.makeText(getApplicationContext(),"INPUT2 IS EMPTY",Toast.LENGTH_LONG));
+            amit.show();
+        }
+        else {
+            Double sum = num1 + num2;
+            e3.setText(Double.toString(sum));
+        }
 
     }
 
@@ -88,50 +100,16 @@ public class MainActivity extends AppCompatActivity {
         EditText e2 = (EditText) findViewById(R.id.input2);
         EditText e3 = (EditText) findViewById(R.id.output);
 
+        e1.setText(Integer.toString(0));
+        e2.setText(Integer.toString(0));
         e3.setText("");
-        e2.setText("");
-        e1.setText("");
         Toast amit = (Toast.makeText(getApplicationContext(),"RESET COMPLETED",Toast.LENGTH_LONG));
         amit.show();
 
     }
     public void quadratic (View view) {
-        EditText e1 = (EditText) findViewById(R.id.input1);
-        EditText e2 = (EditText) findViewById(R.id.input2);
-        EditText e3 = (EditText) findViewById(R.id.output);
-        double num1 = Double.parseDouble(e1.getText().toString());
-        String num2 = e2.getText().toString();
-        double a = (num2.charAt(0));
-        double b = (num2.charAt(4));
-        double c = (num2.charAt(7));
-        double d = (num2.charAt(3));
-        double e = (num2.charAt(6));
-        a=a-48;
-        b=b-48;
-        c=c-48;
-        double sum=0;
-
-      if (e1.getText().toString()=="" )
-      {
-          Toast amit = (Toast.makeText(getApplicationContext(),"INPUT1 IS EMPTY",Toast.LENGTH_LONG));
-                  amit.show();}
-        else if (num2=="" )
-        {
-            Toast amit = (Toast.makeText(getApplicationContext(),"INPUT2 IS EMPTY",Toast.LENGTH_LONG));
-            amit.show();}
-            else{
-
-           if (d==45 && e==45)
-               sum = a * num1 * num1 - b * num1 - c;
-            else if (d==45 && e ==43)
-                 sum = a * num1 * num1 - b * num1 + c;
-            else if (d==43 && e==45)
-                sum = a * num1 * num1 + b * num1 - c;
-            else if (d==43 && e==43)
-                sum = a * num1 * num1 + b * num1 + c;
-
-
-        e3.setText(Double.toString(sum));}
+        Intent amit = new Intent(".equation");
+        startActivity(amit);
     }
    
     @Override
